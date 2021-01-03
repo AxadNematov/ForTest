@@ -6,31 +6,24 @@
         xmlns:local="clr-namespace:WpfApplication11"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="MainWindow" Height="455.897" Width="991.667" ResizeMode="NoResize">
+        Title="MainWindow" Height="916.057" Width="1524.253" ResizeMode="NoResize">
     <Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="424" Background="#FFC1C1C1">
-            <TextBox x:Name="age" materialDesign:HintAssist.Hint="Name" HorizontalAlignment="Left" Height="25" Margin="22,118,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE8E8E8"/>
-            <TextBox x:Name="name" materialDesign:HintAssist.Hint="Surname" HorizontalAlignment="Left" Height="25" Margin="22,147,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE8E8E8"/>
-            <TextBox x:Name="surname" materialDesign:HintAssist.Hint="Age" HorizontalAlignment="Left" Height="25" Margin="22,182,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE8E8E8" Padding="0"/>
-            <TextBox x:Name="mail" materialDesign:HintAssist.Hint="Phone" HorizontalAlignment="Left" Height="25" Margin="22,216,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE8E8E8"/>
-            <TextBox x:Name="phone" materialDesign:HintAssist.Hint="Mail" HorizontalAlignment="Left" Height="25" Margin="22,252,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FFE8E8E8"/>
-            <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Width="98" Click="btnSave_Click"/>
-            <Button x:Name="btnEdit" Content="Update" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="98" Click="btnEdit_Click"/>
-            <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Width="98" Click="btnDelete_Click"/>
-            <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="22,66,0,0" VerticalAlignment="Top" Width="86" Click="btnRefresh_Click"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="285" Height="884" Background="#FFC1C1C1">
+            <Button x:Name="btnEdit" Content="Update" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Width="86" Click="btnEdit_Click"/>
+            <Button x:Name="btnDelete" Content="Open" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="86" Click="btnDelete_Click"/>
+            <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="86" Click="btnRefresh_Click"/>
 
         </Grid>
-        <Grid HorizontalAlignment="Right" VerticalAlignment="top" Height="424" Width="779" Background="#FFF3CDCD">
-            <DataGrid x:Name="myDatagrid" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" Background="#FFEEEEEE" Margin="-6,0,0,0" SelectionChanged="myDatagrid_SelectionChanged" CanUserAddRows="False" IsReadOnly="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Binding="{Binding id}" />
-                    <DataGridTextColumn Header="Name" Binding="{Binding name}" />
-                    <DataGridTextColumn Header="Surname" Binding="{Binding surname}" />
-                    <DataGridTextColumn Header="Age" Binding="{Binding age}" />
-                    <DataGridTextColumn Header="Phone" Binding="{Binding phone}" />
-                    <DataGridTextColumn Header="Mail" Binding="{Binding mail}" />
-                </DataGrid.Columns>
-            </DataGrid>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="top" Height="884" Width="1233" Background="#FFF3CDCD">
+
+            <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="884" VerticalAlignment="Top" Background="AliceBlue" Width="1233">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+
         </Grid>
     </Grid>
 </Window>

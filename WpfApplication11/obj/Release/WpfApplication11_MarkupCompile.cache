@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Release\
 WpfApplication11
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\App.xaml
 11151548125
 21750853300
@@ -16,5 +16,5 @@ C:\Users\Axad\source\repos\ForTest\WpfApplication11\App.xaml
 202003552015
 MainWindow.xaml;
 
-False
+True
 

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,82 +23,52 @@ namespace WpfApplication11
     public partial class MainWindow : Window
     {
         lcdatabaseTestEntities _db = new lcdatabaseTestEntities();
-        public static DataGrid datagrid;
-        int selectedId = 0;
+
         public MainWindow()
         {
             InitializeComponent();
-            Load();
+           
+            for(int i=0; i<10; i++)
+            {
+                //richTextBox.AppendText("Axad Nematov Komilovich sdjnev rekvjnevno rekqjvnenvore\n");
+                
+            }
         }
-        private void Load()
-        {
-            myDatagrid.ItemsSource = _db.people.ToList();
-            datagrid = myDatagrid;
-        }
-
+        
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            person p = new person()
-            {
-                age = age.Text,
-                name = name.Text,
-                surname = surname.Text,
-                mail = mail.Text,
-                phone = phone.Text
-            };
-            _db.people.Add(p);
-            _db.SaveChanges();
-            datagrid.ItemsSource = _db.people.ToList();
-            name.Text = "";
-            surname.Text = "";
-            age.Text = "";
-            phone.Text = "";
-            mail.Text = "";
+            
         }
 
         private void myDatagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (myDatagrid.SelectedItem != null)
-            {
-                selectedId = Convert.ToInt32((myDatagrid.SelectedItem as person).id);
-                name.Text = (myDatagrid.SelectedItem as person).name;
-                surname.Text = (myDatagrid.SelectedItem as person).surname;
-                age.Text = (myDatagrid.SelectedItem as person).age;
-                phone.Text = (myDatagrid.SelectedItem as person).phone;
-                mail.Text = (myDatagrid.SelectedItem as person).mail;
-            }
+            
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            person update = (from m in _db.people
-                             where m.id == selectedId
-                             select m).Single();
-            update.name = name.Text;
-            update.surname = surname.Text;
-            update.age = age.Text;
-            update.phone = phone.Text;
-            update.mail = mail.Text;
-            _db.SaveChanges();
-            myDatagrid.ItemsSource = _db.people.ToList();
+            
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            var delete = _db.people.Where(m => m.id == selectedId).Single();
-            _db.people.Remove(delete);
-            _db.SaveChanges();
-            myDatagrid.ItemsSource = _db.people.ToList();
-            myDatagrid.SelectedIndex = 0;
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.DefaultExt = ".doc";
+            dlg.Filter = "Word documents (.txt)|*.txt";
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                if (dlg.FileName.Length > 0)
+                {
+                    richTextBox.AppendText(dlg.FileName+"\n");
+                    richTextBox.AppendText(File.ReadAllText(dlg.FileName));
+                }
+            }
         }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            name.Text = "";
-            surname.Text = "";
-            age.Text = "";
-            phone.Text = "";
-            mail.Text = "";
+            
         }
     }
 }
