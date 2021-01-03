@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="lcdatabaseTestModelStoreContainer" CdmEntityContainer="lcdatabaseTestEntities">
+    <EntitySetMapping Name="people">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.person">
+        <MappingFragment StoreEntitySet="person">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Boxes">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.Box">
+        <MappingFragment StoreEntitySet="Boxes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="box_number" ColumnName="box_number" />
+          <ScalarProperty Name="black_id" ColumnName="black_id" />
+          <ScalarProperty Name="grey_id" ColumnName="grey_id" />
+          <ScalarProperty Name="location_x" ColumnName="location_x" />
+          <ScalarProperty Name="location_y" ColumnName="location_y" />
+          <ScalarProperty Name="location_z" ColumnName="location_z" />
+          <ScalarProperty Name="block" ColumnName="block" />
+          <ScalarProperty Name="red_id" ColumnName="red_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="collected_contract_items">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.collected_contract_items">
+        <MappingFragment StoreEntitySet="collected_contract_items">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_contract" ColumnName="id_contract" />
+          <ScalarProperty Name="white_id" ColumnName="white_id" />
+          <ScalarProperty Name="item_code" ColumnName="item_code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="no_poleta" ColumnName="no_poleta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="collected_contracts">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.collected_contracts">
+        <MappingFragment StoreEntitySet="collected_contracts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_contract" ColumnName="id_contract" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="delivery_type" ColumnName="delivery_type" />
+          <ScalarProperty Name="id_cp" ColumnName="id_cp" />
+          <ScalarProperty Name="client_order_id" ColumnName="client_order_id" />
+          <ScalarProperty Name="id_order" ColumnName="id_order" />
+          <ScalarProperty Name="delivery_point" ColumnName="delivery_point" />
+          <ScalarProperty Name="cp_version" ColumnName="cp_version" />
+          <ScalarProperty Name="cp_date" ColumnName="cp_date" />
+          <ScalarProperty Name="client_order_id_date" ColumnName="client_order_id_date" />
+          <ScalarProperty Name="id_order_date" ColumnName="id_order_date" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="customer" ColumnName="customer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="com_proposal">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.com_proposal">
+        <MappingFragment StoreEntitySet="com_proposal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cp_id" ColumnName="cp_id" />
+          <ScalarProperty Name="cp_date" ColumnName="cp_date" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="delivery_type" ColumnName="delivery_type" />
+          <ScalarProperty Name="rw" ColumnName="rw" />
+          <ScalarProperty Name="air" ColumnName="air" />
+          <ScalarProperty Name="po_id" ColumnName="po_id" />
+          <ScalarProperty Name="po_date" ColumnName="po_date" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="ct_id" ColumnName="ct_id" />
+          <ScalarProperty Name="ct_date" ColumnName="ct_date" />
+          <ScalarProperty Name="customer" ColumnName="customer" />
+          <ScalarProperty Name="project" ColumnName="project" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="company_details">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.company_details">
+        <MappingFragment StoreEntitySet="company_details">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="port_name" ColumnName="port_name" />
+          <ScalarProperty Name="final_destination" ColumnName="final_destination" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contracts">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.contract">
+        <MappingFragment StoreEntitySet="contracts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_contract" ColumnName="id_contract" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="delivery_type" ColumnName="delivery_type" />
+          <ScalarProperty Name="id_cp" ColumnName="id_cp" />
+          <ScalarProperty Name="client_order_id" ColumnName="client_order_id" />
+          <ScalarProperty Name="id_order" ColumnName="id_order" />
+          <ScalarProperty Name="delivery_point" ColumnName="delivery_point" />
+          <ScalarProperty Name="cp_version" ColumnName="cp_version" />
+          <ScalarProperty Name="customer" ColumnName="customer" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="cp_date" ColumnName="cp_date" />
+          <ScalarProperty Name="client_order_id_date" ColumnName="client_order_id_date" />
+          <ScalarProperty Name="id_order_date" ColumnName="id_order_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items_in_boxes">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.items_in_boxes">
+        <MappingFragment StoreEntitySet="items_in_boxes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="box_numb" ColumnName="box_numb" />
+          <ScalarProperty Name="part_name" ColumnName="part_name" />
+          <ScalarProperty Name="part_code" ColumnName="part_code" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="net" ColumnName="net" />
+          <ScalarProperty Name="gross" ColumnName="gross" />
+          <ScalarProperty Name="id_order" ColumnName="id_order" />
+          <ScalarProperty Name="black_id" ColumnName="black_id" />
+          <ScalarProperty Name="pl_id" ColumnName="pl_id" />
+          <ScalarProperty Name="pl_date" ColumnName="pl_date" />
+          <ScalarProperty Name="invoice_id" ColumnName="invoice_id" />
+          <ScalarProperty Name="invoice_date" ColumnName="invoice_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items_in_contract">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.items_in_contract">
+        <MappingFragment StoreEntitySet="items_in_contract">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_contract" ColumnName="id_contract" />
+          <ScalarProperty Name="item_code" ColumnName="item_code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+          <ScalarProperty Name="amount_price" ColumnName="amount_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items_in_cp">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.items_in_cp">
+        <MappingFragment StoreEntitySet="items_in_cp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="part_code" ColumnName="part_code" />
+          <ScalarProperty Name="part_name" ColumnName="part_name" />
+          <ScalarProperty Name="hs_code" ColumnName="hs_code" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+          <ScalarProperty Name="amount_price" ColumnName="amount_price" />
+          <ScalarProperty Name="cp_id" ColumnName="cp_id" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="weight_of_item" ColumnName="weight_of_item" />
+          <ScalarProperty Name="price_rw" ColumnName="price_rw" />
+          <ScalarProperty Name="price_air" ColumnName="price_air" />
+          <ScalarProperty Name="production_time" ColumnName="production_time" />
+          <ScalarProperty Name="delivery_air" ColumnName="delivery_air" />
+          <ScalarProperty Name="delivery_rw" ColumnName="delivery_rw" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="official_letters">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.official_letters">
+        <MappingFragment StoreEntitySet="official_letters">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="letter_id" ColumnName="letter_id" />
+          <ScalarProperty Name="letter_date" ColumnName="letter_date" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="letter_text" ColumnName="letter_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orderItems">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.orderItem">
+        <MappingFragment StoreEntitySet="orderItems">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_item" ColumnName="id_item" />
+          <ScalarProperty Name="part_code" ColumnName="part_code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="id_order" ColumnName="id_order" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="version_date" ColumnName="version_date" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="lcdatabaseTestModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_order" ColumnName="id_order" />
+          <ScalarProperty Name="customer_order_id" ColumnName="customer_order_id" />
+          <ScalarProperty Name="dz_date" ColumnName="dz_date" />
+          <ScalarProperty Name="c_date" ColumnName="c_date" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="com_proposal" ColumnName="com_proposal" />
+          <ScalarProperty Name="contract" ColumnName="contract" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="com_proposal_date" ColumnName="com_proposal_date" />
+          <ScalarProperty Name="contract_date" ColumnName="contract_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

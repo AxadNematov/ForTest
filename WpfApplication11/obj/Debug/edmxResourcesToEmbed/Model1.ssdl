@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lcdatabaseTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.Boxes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Boxes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="box_number" Type="int" />
+    <Property Name="black_id" Type="nvarchar(max)" />
+    <Property Name="grey_id" Type="nvarchar(max)" />
+    <Property Name="location_x" Type="nvarchar(max)" />
+    <Property Name="location_y" Type="nvarchar(max)" />
+    <Property Name="location_z" Type="nvarchar(max)" />
+    <Property Name="block" Type="nvarchar(max)" />
+    <Property Name="red_id" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.collected_contract_items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="collected_contract_items">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_contract" Type="nvarchar(max)" />
+    <Property Name="white_id" Type="nvarchar(max)" />
+    <Property Name="item_code" Type="nvarchar(max)" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="quantity" Type="nvarchar(max)" />
+    <Property Name="no_poleta" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.collected_contracts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="collected_contracts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_contract" Type="nvarchar(max)" />
+    <Property Name="date" Type="nvarchar(max)" />
+    <Property Name="delivery_type" Type="nvarchar(max)" />
+    <Property Name="id_cp" Type="nvarchar(max)" />
+    <Property Name="client_order_id" Type="nvarchar(max)" />
+    <Property Name="id_order" Type="nvarchar(max)" />
+    <Property Name="delivery_point" Type="nvarchar(max)" />
+    <Property Name="cp_version" Type="nvarchar(max)" />
+    <Property Name="cp_date" Type="nvarchar(max)" />
+    <Property Name="client_order_id_date" Type="nvarchar(max)" />
+    <Property Name="id_order_date" Type="nvarchar(max)" />
+    <Property Name="amount" Type="float" />
+    <Property Name="customer" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.com_proposal' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="com_proposal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cp_id" Type="nvarchar(max)" />
+    <Property Name="cp_date" Type="nvarchar(max)" />
+    <Property Name="version" Type="int" />
+    <Property Name="delivery_type" Type="nvarchar(max)" />
+    <Property Name="rw" Type="nvarchar(max)" />
+    <Property Name="air" Type="nvarchar(max)" />
+    <Property Name="po_id" Type="nvarchar(max)" />
+    <Property Name="po_date" Type="nvarchar(max)" />
+    <Property Name="order_id" Type="nvarchar(max)" />
+    <Property Name="order_date" Type="nvarchar(max)" />
+    <Property Name="ct_id" Type="nvarchar(max)" />
+    <Property Name="ct_date" Type="nvarchar(max)" />
+    <Property Name="customer" Type="nvarchar(max)" />
+    <Property Name="project" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.company_details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="company_details">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="company" Type="nvarchar(max)" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="contact" Type="nvarchar(max)" />
+    <Property Name="port_name" Type="nvarchar(max)" />
+    <Property Name="final_destination" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.contracts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="contracts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_contract" Type="nvarchar(max)" />
+    <Property Name="date" Type="nvarchar(max)" />
+    <Property Name="delivery_type" Type="nvarchar(max)" />
+    <Property Name="id_cp" Type="nvarchar(max)" />
+    <Property Name="client_order_id" Type="nvarchar(max)" />
+    <Property Name="id_order" Type="nvarchar(max)" />
+    <Property Name="delivery_point" Type="nvarchar(max)" />
+    <Property Name="cp_version" Type="nvarchar(max)" />
+    <Property Name="customer" Type="nvarchar(max)" />
+    <Property Name="amount" Type="float" />
+    <Property Name="cp_date" Type="nvarchar(max)" />
+    <Property Name="client_order_id_date" Type="nvarchar(max)" />
+    <Property Name="id_order_date" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.items_in_boxes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="items_in_boxes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="box_numb" Type="int" />
+    <Property Name="part_name" Type="nvarchar(max)" />
+    <Property Name="part_code" Type="nvarchar(max)" />
+    <Property Name="amount" Type="nvarchar(max)" />
+    <Property Name="net" Type="nvarchar(max)" />
+    <Property Name="gross" Type="nvarchar(max)" />
+    <Property Name="id_order" Type="nvarchar(max)" />
+    <Property Name="black_id" Type="nvarchar(max)" />
+    <Property Name="pl_id" Type="nvarchar(max)" />
+    <Property Name="pl_date" Type="nvarchar(max)" />
+    <Property Name="invoice_id" Type="nvarchar(max)" />
+    <Property Name="invoice_date" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.items_in_contract' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="items_in_contract">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_contract" Type="nvarchar(max)" />
+    <Property Name="item_code" Type="nvarchar(max)" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="quantity" Type="nvarchar(max)" />
+    <Property Name="unit_price" Type="nvarchar(max)" />
+    <Property Name="amount_price" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.items_in_cp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="items_in_cp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="part_code" Type="nvarchar(max)" />
+    <Property Name="part_name" Type="nvarchar(max)" />
+    <Property Name="hs_code" Type="nvarchar(max)" />
+    <Property Name="quantity" Type="nvarchar(max)" />
+    <Property Name="unit_price" Type="nvarchar(max)" />
+    <Property Name="amount_price" Type="nvarchar(max)" />
+    <Property Name="cp_id" Type="nvarchar(max)" />
+    <Property Name="percentage" Type="nvarchar(max)" />
+    <Property Name="weight_of_item" Type="nvarchar(max)" />
+    <Property Name="price_rw" Type="nvarchar(max)" />
+    <Property Name="price_air" Type="nvarchar(max)" />
+    <Property Name="production_time" Type="nvarchar(max)" />
+    <Property Name="delivery_air" Type="nvarchar(max)" />
+    <Property Name="delivery_rw" Type="nvarchar(max)" />
+    <Property Name="version" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.official_letters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="official_letters">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="letter_id" Type="varchar" MaxLength="50" />
+    <Property Name="letter_date" Type="varchar" MaxLength="50" />
+    <Property Name="company_name" Type="varchar" MaxLength="50" />
+    <Property Name="letter_text" Type="text" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.orderItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="orderItems">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_item" Type="int" />
+    <Property Name="part_code" Type="nvarchar(max)" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="amount" Type="int" />
+    <Property Name="id_order" Type="nvarchar(max)" />
+    <Property Name="version" Type="int" Nullable="false" />
+    <Property Name="version_date" Type="nvarchar(max)" />
+    <Property Name="remarks" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lcdatabaseTest.dbo.orders' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_order" Type="nvarchar(max)" />
+    <Property Name="customer_order_id" Type="nvarchar(max)" />
+    <Property Name="dz_date" Type="nvarchar(max)" />
+    <Property Name="c_date" Type="nvarchar(max)" />
+    <Property Name="descr" Type="nvarchar(max)" />
+    <Property Name="version" Type="int" Nullable="false" />
+    <Property Name="com_proposal" Type="nvarchar(max)" />
+    <Property Name="contract" Type="nvarchar(max)" />
+    <Property Name="remarks" Type="nvarchar(max)" />
+    <Property Name="com_proposal_date" Type="nvarchar(max)" />
+    <Property Name="contract_date" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="person">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="surname" Type="nvarchar(max)" />
+    <Property Name="age" Type="nvarchar(max)" />
+    <Property Name="phone" Type="nvarchar(max)" />
+    <Property Name="mail" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'lcdatabaseTest.dbo.Shelfs' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Shelfs">
+          <Property Name="z" Type="int" />
+          <Property Name="x" Type="int" />
+          <Property Name="y" Type="int" />
+        </EntityType>-->
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityContainer Name="lcdatabaseTestModelStoreContainer">
+    <EntitySet Name="person" EntityType="Self.person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Boxes" EntityType="Self.Boxes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Boxes].[id] AS [id], 
+    [Boxes].[box_number] AS [box_number], 
+    [Boxes].[black_id] AS [black_id], 
+    [Boxes].[grey_id] AS [grey_id], 
+    [Boxes].[location_x] AS [location_x], 
+    [Boxes].[location_y] AS [location_y], 
+    [Boxes].[location_z] AS [location_z], 
+    [Boxes].[block] AS [block], 
+    [Boxes].[red_id] AS [red_id]
+    FROM [dbo].[Boxes] AS [Boxes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="collected_contract_items" EntityType="Self.collected_contract_items" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [collected_contract_items].[id] AS [id], 
+    [collected_contract_items].[id_contract] AS [id_contract], 
+    [collected_contract_items].[white_id] AS [white_id], 
+    [collected_contract_items].[item_code] AS [item_code], 
+    [collected_contract_items].[name] AS [name], 
+    [collected_contract_items].[quantity] AS [quantity], 
+    [collected_contract_items].[no_poleta] AS [no_poleta]
+    FROM [dbo].[collected_contract_items] AS [collected_contract_items]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="collected_contracts" EntityType="Self.collected_contracts" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [collected_contracts].[id] AS [id], 
+    [collected_contracts].[id_contract] AS [id_contract], 
+    [collected_contracts].[date] AS [date], 
+    [collected_contracts].[delivery_type] AS [delivery_type], 
+    [collected_contracts].[id_cp] AS [id_cp], 
+    [collected_contracts].[client_order_id] AS [client_order_id], 
+    [collected_contracts].[id_order] AS [id_order], 
+    [collected_contracts].[delivery_point] AS [delivery_point], 
+    [collected_contracts].[cp_version] AS [cp_version], 
+    [collected_contracts].[cp_date] AS [cp_date], 
+    [collected_contracts].[client_order_id_date] AS [client_order_id_date], 
+    [collected_contracts].[id_order_date] AS [id_order_date], 
+    [collected_contracts].[amount] AS [amount], 
+    [collected_contracts].[customer] AS [customer]
+    FROM [dbo].[collected_contracts] AS [collected_contracts]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="com_proposal" EntityType="Self.com_proposal" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [com_proposal].[id] AS [id], 
+    [com_proposal].[cp_id] AS [cp_id], 
+    [com_proposal].[cp_date] AS [cp_date], 
+    [com_proposal].[version] AS [version], 
+    [com_proposal].[delivery_type] AS [delivery_type], 
+    [com_proposal].[rw] AS [rw], 
+    [com_proposal].[air] AS [air], 
+    [com_proposal].[po_id] AS [po_id], 
+    [com_proposal].[po_date] AS [po_date], 
+    [com_proposal].[order_id] AS [order_id], 
+    [com_proposal].[order_date] AS [order_date], 
+    [com_proposal].[ct_id] AS [ct_id], 
+    [com_proposal].[ct_date] AS [ct_date], 
+    [com_proposal].[customer] AS [customer], 
+    [com_proposal].[project] AS [project]
+    FROM [dbo].[com_proposal] AS [com_proposal]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="company_details" EntityType="Self.company_details" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [company_details].[id] AS [id], 
+    [company_details].[company] AS [company], 
+    [company_details].[address] AS [address], 
+    [company_details].[contact] AS [contact], 
+    [company_details].[port_name] AS [port_name], 
+    [company_details].[final_destination] AS [final_destination]
+    FROM [dbo].[company_details] AS [company_details]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="contracts" EntityType="Self.contracts" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [contracts].[id] AS [id], 
+    [contracts].[id_contract] AS [id_contract], 
+    [contracts].[date] AS [date], 
+    [contracts].[delivery_type] AS [delivery_type], 
+    [contracts].[id_cp] AS [id_cp], 
+    [contracts].[client_order_id] AS [client_order_id], 
+    [contracts].[id_order] AS [id_order], 
+    [contracts].[delivery_point] AS [delivery_point], 
+    [contracts].[cp_version] AS [cp_version], 
+    [contracts].[customer] AS [customer], 
+    [contracts].[amount] AS [amount], 
+    [contracts].[cp_date] AS [cp_date], 
+    [contracts].[client_order_id_date] AS [client_order_id_date], 
+    [contracts].[id_order_date] AS [id_order_date]
+    FROM [dbo].[contracts] AS [contracts]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="items_in_boxes" EntityType="Self.items_in_boxes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [items_in_boxes].[id] AS [id], 
+    [items_in_boxes].[box_numb] AS [box_numb], 
+    [items_in_boxes].[part_name] AS [part_name], 
+    [items_in_boxes].[part_code] AS [part_code], 
+    [items_in_boxes].[amount] AS [amount], 
+    [items_in_boxes].[net] AS [net], 
+    [items_in_boxes].[gross] AS [gross], 
+    [items_in_boxes].[id_order] AS [id_order], 
+    [items_in_boxes].[black_id] AS [black_id], 
+    [items_in_boxes].[pl_id] AS [pl_id], 
+    [items_in_boxes].[pl_date] AS [pl_date], 
+    [items_in_boxes].[invoice_id] AS [invoice_id], 
+    [items_in_boxes].[invoice_date] AS [invoice_date]
+    FROM [dbo].[items_in_boxes] AS [items_in_boxes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="items_in_contract" EntityType="Self.items_in_contract" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [items_in_contract].[id] AS [id], 
+    [items_in_contract].[id_contract] AS [id_contract], 
+    [items_in_contract].[item_code] AS [item_code], 
+    [items_in_contract].[name] AS [name], 
+    [items_in_contract].[quantity] AS [quantity], 
+    [items_in_contract].[unit_price] AS [unit_price], 
+    [items_in_contract].[amount_price] AS [amount_price]
+    FROM [dbo].[items_in_contract] AS [items_in_contract]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="items_in_cp" EntityType="Self.items_in_cp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [items_in_cp].[id] AS [id], 
+    [items_in_cp].[part_code] AS [part_code], 
+    [items_in_cp].[part_name] AS [part_name], 
+    [items_in_cp].[hs_code] AS [hs_code], 
+    [items_in_cp].[quantity] AS [quantity], 
+    [items_in_cp].[unit_price] AS [unit_price], 
+    [items_in_cp].[amount_price] AS [amount_price], 
+    [items_in_cp].[cp_id] AS [cp_id], 
+    [items_in_cp].[percentage] AS [percentage], 
+    [items_in_cp].[weight_of_item] AS [weight_of_item], 
+    [items_in_cp].[price_rw] AS [price_rw], 
+    [items_in_cp].[price_air] AS [price_air], 
+    [items_in_cp].[production_time] AS [production_time], 
+    [items_in_cp].[delivery_air] AS [delivery_air], 
+    [items_in_cp].[delivery_rw] AS [delivery_rw], 
+    [items_in_cp].[version] AS [version]
+    FROM [dbo].[items_in_cp] AS [items_in_cp]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="official_letters" EntityType="Self.official_letters" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [official_letters].[id] AS [id], 
+    [official_letters].[letter_id] AS [letter_id], 
+    [official_letters].[letter_date] AS [letter_date], 
+    [official_letters].[company_name] AS [company_name], 
+    [official_letters].[letter_text] AS [letter_text]
+    FROM [dbo].[official_letters] AS [official_letters]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="orderItems" EntityType="Self.orderItems" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [orderItems].[id] AS [id], 
+    [orderItems].[id_item] AS [id_item], 
+    [orderItems].[part_code] AS [part_code], 
+    [orderItems].[name] AS [name], 
+    [orderItems].[amount] AS [amount], 
+    [orderItems].[id_order] AS [id_order], 
+    [orderItems].[version] AS [version], 
+    [orderItems].[version_date] AS [version_date], 
+    [orderItems].[remarks] AS [remarks]
+    FROM [dbo].[orderItems] AS [orderItems]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="orders" EntityType="Self.orders" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [orders].[id] AS [id], 
+    [orders].[id_order] AS [id_order], 
+    [orders].[customer_order_id] AS [customer_order_id], 
+    [orders].[dz_date] AS [dz_date], 
+    [orders].[c_date] AS [c_date], 
+    [orders].[descr] AS [descr], 
+    [orders].[version] AS [version], 
+    [orders].[com_proposal] AS [com_proposal], 
+    [orders].[contract] AS [contract], 
+    [orders].[remarks] AS [remarks], 
+    [orders].[com_proposal_date] AS [com_proposal_date], 
+    [orders].[contract_date] AS [contract_date]
+    FROM [dbo].[orders] AS [orders]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lcdatabaseTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="person">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Box">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="box_number" Type="Int32" />
+    <Property Name="black_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="grey_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="location_x" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="location_y" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="location_z" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="block" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="red_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="collected_contract_items">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_contract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="white_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="item_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="quantity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="no_poleta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="collected_contracts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_contract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_cp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="client_order_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_order" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_point" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cp_version" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cp_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="client_order_id_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_order_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="Double" />
+    <Property Name="customer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="com_proposal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cp_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cp_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="delivery_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="rw" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="air" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="po_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="po_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="order_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="order_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ct_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ct_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="customer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="project" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="company_details">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="company" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="port_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="final_destination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="contract">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_contract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_cp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="client_order_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_order" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_point" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cp_version" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="customer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="Double" />
+    <Property Name="cp_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="client_order_id_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_order_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="items_in_boxes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="box_numb" Type="Int32" />
+    <Property Name="part_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="part_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="net" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="gross" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_order" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="black_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pl_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pl_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="invoice_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="invoice_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="items_in_contract">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_contract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="item_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="quantity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="unit_price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount_price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="items_in_cp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="part_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="part_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="hs_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="quantity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="unit_price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount_price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cp_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="weight_of_item" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="price_rw" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="price_air" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="production_time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_air" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="delivery_rw" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="version" Type="Int32" />
+  </EntityType>
+  <EntityType Name="official_letters">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="letter_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="letter_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="company_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="letter_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="orderItem">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_item" Type="Int32" />
+    <Property Name="part_code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="Int32" />
+    <Property Name="id_order" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="version" Type="Int32" Nullable="false" />
+    <Property Name="version_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_order" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="customer_order_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dz_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="c_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="version" Type="Int32" Nullable="false" />
+    <Property Name="com_proposal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="contract" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="com_proposal_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="contract_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="lcdatabaseTestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="people" EntityType="Self.person" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Boxes" EntityType="Self.Box" />
+    <EntitySet Name="collected_contract_items" EntityType="Self.collected_contract_items" />
+    <EntitySet Name="collected_contracts" EntityType="Self.collected_contracts" />
+    <EntitySet Name="com_proposal" EntityType="Self.com_proposal" />
+    <EntitySet Name="company_details" EntityType="Self.company_details" />
+    <EntitySet Name="contracts" EntityType="Self.contract" />
+    <EntitySet Name="items_in_boxes" EntityType="Self.items_in_boxes" />
+    <EntitySet Name="items_in_contract" EntityType="Self.items_in_contract" />
+    <EntitySet Name="items_in_cp" EntityType="Self.items_in_cp" />
+    <EntitySet Name="official_letters" EntityType="Self.official_letters" />
+    <EntitySet Name="orderItems" EntityType="Self.orderItem" />
+    <EntitySet Name="orders" EntityType="Self.order" />
+  </EntityContainer>
+</Schema>
