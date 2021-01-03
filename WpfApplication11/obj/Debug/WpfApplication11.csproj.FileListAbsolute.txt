@@ -50,3 +50,10 @@ C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.c
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.csproj.CopyComplete
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.exe
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.pdb
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.Doc.dll
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.License.dll
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.Pdf.dll
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.Doc.xml
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.License.xml
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.Pdf.xml

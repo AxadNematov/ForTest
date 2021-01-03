@@ -14,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Spire.Doc;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
 
 namespace WpfApplication11
 {
@@ -30,7 +33,7 @@ namespace WpfApplication11
            
             for(int i=0; i<10; i++)
             {
-                //richTextBox.AppendText("Axad Nematov Komilovich sdjnev rekvjnevno rekqjvnenvore\n");
+                //richTextBox.AppendText("gafdhgajvhbkjwn kjcnwenlkcwe;k ewjhbcjwlecw sjvhechwbiuj");
                 
             }
         }
@@ -40,28 +43,21 @@ namespace WpfApplication11
             
         }
 
-        private void myDatagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-        }
-
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        private void btnOpen_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.DefaultExt = ".doc";
-            dlg.Filter = "Word documents (.txt)|*.txt";
+            dlg.Filter = "Word documents (.doc)|*.docx";
             Nullable<bool> result = dlg.ShowDialog();
             if (result == true)
             {
                 if (dlg.FileName.Length > 0)
                 {
-                    richTextBox.AppendText(dlg.FileName+"\n");
-                    richTextBox.AppendText(File.ReadAllText(dlg.FileName));
+                    richTextBox.Document.Blocks.Clear();
+                    //richTextBox.AppendText(dlg.FileName+"\n");
+                    Document document = new Document();
+                    document.LoadFromFile(dlg.FileName);
+                    richTextBox.AppendText(document.GetText());
                 }
             }
         }

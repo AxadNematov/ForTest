@@ -9,9 +9,9 @@
         Title="MainWindow" Height="916.057" Width="1524.253" ResizeMode="NoResize">
     <Grid>
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="285" Height="884" Background="#FFC1C1C1">
-            <Button x:Name="btnEdit" Content="Update" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Width="86" Click="btnEdit_Click"/>
-            <Button x:Name="btnDelete" Content="Open" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="86" Click="btnDelete_Click"/>
-            <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="86" Click="btnRefresh_Click"/>
+            <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="86" Click="btnSave_Click"/>
+            <Button x:Name="btnOpen" Content="Open" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="86" Click="btnOpen_Click" RenderTransformOrigin="2.256,-2.125"/>
+            <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="86" Click="btnRefresh_Click" RenderTransformOrigin="0.477,-0.766"/>
 
         </Grid>
         <Grid HorizontalAlignment="Right" VerticalAlignment="top" Height="884" Width="1233" Background="#FFF3CDCD">
