@@ -35,7 +35,6 @@ C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\EntityFramework.Sq
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\MaterialDesignColors.pdb
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.csprojAssemblyReference.cache
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\MainWindow.g.cs
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\App.g.cs
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11_Content.g.cs
@@ -46,8 +45,6 @@ C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\MainWindow.baml
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.g.resources
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.Properties.Resources.resources
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.csproj.GenerateResource.cache
-C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.csproj.CoreCompileInputs.cache
-C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.csproj.CopyComplete
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.exe
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.pdb
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.Doc.dll
@@ -57,3 +54,4 @@ C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Microsoft.mshtml.d
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.Doc.xml
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.License.xml
 C:\Users\Axad\source\repos\ForTest\WpfApplication11\bin\Debug\Spire.Pdf.xml
+C:\Users\Axad\source\repos\ForTest\WpfApplication11\obj\Debug\WpfApplication11.csprojResolveAssemblyReference.cache
